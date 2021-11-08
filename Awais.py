@@ -89,11 +89,6 @@ def menu2():
 		os.system('clear')
 		time.sleep(1)
 	try:
-              
-		a = json.loads(otw.text)
-		name = a['name']
-		id = a['id']
-	except KeyError:
 		os.system('clear')
 		print"[!] Account Is On Checkpoint"
 		os.system('rm -rf login.txt')
