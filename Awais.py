@@ -186,7 +186,7 @@ def choice1_menu():
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			RASHED("[✓] Account  Name: "+op["name"])
+			AWAIS("[✓] Account  Name: "+op["name"])
 			
 			time.sleep(0.5)
 		except KeyError:
