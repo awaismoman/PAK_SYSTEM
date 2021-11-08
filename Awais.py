@@ -89,7 +89,7 @@ def menu2():
 		os.system('clear')
 		time.sleep(1)
 	try:
-		otw = requests.get("https://graph.facebook.com/"+:str"?access_token="+toket)
+               otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
 		a = json.loads(otw.text)
 		name = a['name']
 		id = a['id']
