@@ -89,7 +89,8 @@ def menu2():
 		os.system('clear')
 		time.sleep(1)
 	try:
-               otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
+		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
+		a = json.loads(otw.text)
 		name = a['name']
 		id = a['id']
 	except KeyError:
@@ -185,7 +186,7 @@ def choice1_menu():
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			AWAIS("[✓] Account  Name: "+op["name"])
+			RASHED("[✓] Account  Name: "+op["name"])
 			
 			time.sleep(0.5)
 		except KeyError:
@@ -468,4 +469,4 @@ def choice2_menu():
 
 	
 if __name__ == '__main__':
-     menu2()
+	menu2()
